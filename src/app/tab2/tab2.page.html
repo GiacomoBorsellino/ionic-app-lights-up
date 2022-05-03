@@ -1,0 +1,15 @@
+<section [ngClass]="{'bgDark': bobi === true, 'bgLight' : bobi === false }">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Clicca il mio pulsante</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <h1 style="text-align: center; color: white;" *ngIf="bobi">C'è un pò di buio, accenderesti la luce?</h1>
+  <h1 style="text-align: center; color: #141414;" *ngIf="!bobi">Eh, così è un pò troppo! Spegni subito!</h1>
+
+  <button *ngIf="bobi" (click)="clicking()"><img src="../../assets/icon/bulb-white.png"></button>
+  <button *ngIf="!bobi" (click)="clicking()"><img src="../../assets/icon/bulb-black.png"></button>
+
+
+</section>
